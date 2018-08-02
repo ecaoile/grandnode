@@ -33,7 +33,11 @@
         @Model.Category.Name
         @if (Model.Category.NumberOfProducts.HasValue)
         {
-            <text> </text>@T("Categories.TotalProducts", Model.Category.NumberOfProducts.Value)
+            <label class="container">
+                @T("Categories.TotalProducts", Model.Category.NumberOfProducts.Value)
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>            
         }
     </a>
     @{
